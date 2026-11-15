@@ -1,6 +1,5 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "biolab-support-movement",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,13 +7,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "16.4.6",
-    "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "lucide-react": "^0.460.0",
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/turbopack": "4.3.3",
-    "babel-plugin-react-compiler": "1.0.0",
-    "tailwindcss": "4.3.3"
+    "@tailwindcss/postcss": "^4.3.5",
+    "tailwindcss": "^4.3.5"
   }
 }
