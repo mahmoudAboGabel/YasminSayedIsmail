@@ -3,38 +3,38 @@ import { Compass, Target, ClipboardCheck, BookOpen, Bot, ListChecks } from "luci
 import { Glass, PageHero, grad, btn } from "@/components/ui";
 
 const steps = [
-  { Icon: Target, t: "Read the unit objectives", d: "Open Units to see the cognitive, affective and psychomotor goals before you begin." },
-  { Icon: ClipboardCheck, t: "Take the pre-test", d: "Each lesson starts with a short pre-test. It shows what you already know; your score does not count against you." },
-  { Icon: BookOpen, t: "Study the lesson", d: "Read each section, then look at the diagram and media slots. Take notes on key terms." },
-  { Icon: Bot, t: "Ask the AI assistant", d: "Stuck on a term? Open AI Chat and ask a short, specific question." },
-  { Icon: ListChecks, t: "Finish with the quiz", d: "Take the final quiz, read the feedback on every answer and retake it to improve your score." },
+  { Icon: Target, t: "اقرأ أهداف الوحدة", d: "ادخل على صفحة الدروس لتعرف ماذا ستتعلم قبل أن تبدأ." },
+  { Icon: ClipboardCheck, t: "حل الاختبار القبلي", d: "كل درس يبدأ باختبار قصير يوضح ما تعرفه بالفعل. لا تقلق، هو للتدريب فقط." },
+  { Icon: BookOpen, t: "ادرس الدرس", d: "اقرأ كل جزء بتركيز، وتابع الصور والفيديوهات، ونفّذ خطوات التجربة." },
+  { Icon: Bot, t: "اسأل المساعد الذكي", d: "إذا لم تفهم كلمة أو فكرة، اكتب سؤالًا قصيرًا وواضحًا في صفحة المساعد." },
+  { Icon: ListChecks, t: "اختبر نفسك", d: "حل الاختبار النهائي، واقرأ التعليق على كل إجابة، وأعد المحاولة لتحسين درجتك." },
 ];
 
 export default function About() {
   return (
     <div>
-      <PageHero Icon={Compass} title="Platform guide" subtitle="Five steps to get the most out of BioLab." />
+      <PageHero Icon={Compass} title="دليل استخدام المنصة" subtitle="خمس خطوات بسيطة لتستفيد أقصى استفادة." />
       <ol className="space-y-4">
         {steps.map(({ Icon, t, d }, i) => (
           <li key={t}>
             <Glass className="flex gap-4">
-              <span className={`${grad} flex h-11 w-11 shrink-0 items-center justify-center rounded-xl`}><Icon className="h-5 w-5 text-white" /></span>
+              <span className={`${grad} flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl`}><Icon className="h-6 w-6 text-white" /></span>
               <div>
-                <h2 className="font-semibold text-white">Step {i + 1}: {t}</h2>
-                <p className="mt-1 text-sm text-slate-300">{d}</p>
+                <h2 className="text-lg font-bold text-white">الخطوة {i + 1}: {t}</h2>
+                <p className="mt-1 leading-relaxed text-slate-300">{d}</p>
               </div>
             </Glass>
           </li>
         ))}
       </ol>
       <Glass className="mt-8">
-        <h2 className="font-semibold text-white">Study tips</h2>
-        <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-slate-300">
-          <li>Study one lesson at a time and finish its quiz before moving on.</li>
-          <li>Ask the AI assistant to explain a concept in simpler words, or to give an example.</li>
-          <li>Check important facts in your textbook.</li>
+        <h2 className="text-lg font-bold text-white">نصائح للمذاكرة</h2>
+        <ul className="mt-3 list-disc space-y-1 ps-5 leading-relaxed text-slate-300">
+          <li>ادرس درسًا واحدًا في كل مرة، وأنهِ اختباره قبل الانتقال للتالي.</li>
+          <li>نفّذ التجارب بنفسك مع أسرتك أو معلمك، واتبع تعليمات الأمان.</li>
+          <li>اسأل المساعد الذكي أن يشرح لك الفكرة بكلمات أبسط أو بمثال.</li>
         </ul>
-        <Link href="/units" className={`${btn} mt-5`}>Go to units</Link>
+        <Link href="/units" className={`${btn} mt-5`}>اذهب إلى الدروس</Link>
       </Glass>
     </div>
   );

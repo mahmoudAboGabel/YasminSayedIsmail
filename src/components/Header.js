@@ -6,15 +6,14 @@ import { Dna, Menu, X } from "lucide-react";
 import { grad } from "./ui";
 
 const links = [
-  ["/", "Home"],
-  ["/about", "Guide"],
-  ["/units", "Units"],
-  ["/chatai", "AI Chat"],
-  ["/quize", "Quizzes"],
-  ["/Preparer", "Creator"],
-  ["/supervisor", "Supervision"],
+  ["/", "الرئيسية"],
+  ["/about", "دليل المنصة"],
+  ["/units", "الدروس"],
+  ["/chatai", "المساعد الذكي"],
+  ["/quize", "الاختبارات"],
+  ["/Preparer", "المُعِدّة"],
+  ["/supervisor", "الإشراف"],
 ];
-
 export default function Header() {
   const [open, setOpen] = useState(false);
   const path = usePathname();
@@ -29,7 +28,7 @@ export default function Header() {
           <span className={`${grad} flex h-9 w-9 items-center justify-center rounded-lg shadow-lg shadow-cyan-500/30`}>
             <Dna className="h-5 w-5" />
           </span>
-          BioLab
+          علومي
         </Link>
         <nav className="hidden items-center gap-1 lg:flex">
           {links.map(([h, l]) => (

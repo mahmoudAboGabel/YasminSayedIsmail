@@ -1,4 +1,5 @@
-import { ImageIcon, Leaf, Bone, Sprout, Activity } from "lucide-react";
+
+import { ImageIcon, Layers, Landmark, FlaskConical, Thermometer } from "lucide-react";
 import Image from "next/image";
 
 export const glass = "backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl";
@@ -6,7 +7,7 @@ export const grad = "bg-gradient-to-r from-cyan-500 to-indigo-600";
 export const gradText = "bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent";
 export const btn = `${grad} inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:brightness-110`;
 export const btnGhost = "inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-semibold text-slate-100 transition hover:bg-white/10";
-export const icons = { Leaf, Bone, Sprout, Activity };
+export const icons = { Layers, Landmark, FlaskConical, Thermometer };
 
 export function Glass({ className = "", children }) {
   return <div className={`${glass} p-6 ${className}`}>{children}</div>;

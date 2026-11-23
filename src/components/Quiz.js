@@ -4,7 +4,7 @@ import Link from "next/link";
 import { CheckCircle2, XCircle, RotateCcw, Trophy } from "lucide-react";
 import { glass, grad, btn, btnGhost } from "./ui";
 
-export default function Quiz({ title, questions, backHref, backLabel = "Back" }) {
+export default function Quiz({ title, questions, backHref, backLabel = "رجوع" }) {
   const [i, setI] = useState(0);
   const [sel, setSel] = useState(null);
   const [score, setScore] = useState(0);
@@ -36,13 +36,13 @@ export default function Quiz({ title, questions, backHref, backLabel = "Back" })
     return (
       <div className={`${glass} p-8 text-center`}>
         <Trophy className="mx-auto h-12 w-12 text-cyan-300" />
-        <h3 className="mt-4 text-2xl font-bold text-white">{title}: complete</h3>
+        <h3 className="mt-4 text-2xl font-bold text-white">{title}: انتهى</h3>
         <p className="mt-2 text-4xl font-extrabold text-cyan-300">{score} / {questions.length}</p>
-        <p className="mt-2 text-slate-400">
-          {pct >= 80 ? "Excellent work. You have mastered this topic." : pct >= 50 ? "Good effort. Review the lesson and try again." : "Keep going. Re-read the lesson, then retake the quiz."}
+        <p className="mt-2 text-lg text-slate-400">
+          {pct >= 80 ? "ممتاز! أنت بطل في هذا الدرس 🌟" : pct >= 50 ? "جيد! راجع الدرس وحاول مرة أخرى 💪" : "لا بأس! اقرأ الدرس مرة أخرى ثم أعد الاختبار 📚"}
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <button onClick={reset} className={btn}><RotateCcw className="h-4 w-4" /> Retake</button>
+          <button onClick={reset} className={btn}><RotateCcw className="h-4 w-4" /> إعادة الاختبار</button>
           {backHref && <Link href={backHref} className={btnGhost}>{backLabel}</Link>}
         </div>
       </div>
@@ -53,16 +53,16 @@ export default function Quiz({ title, questions, backHref, backLabel = "Back" })
     <div className={`${glass} p-6 sm:p-8`}>
       <div className="mb-5 flex items-center justify-between text-sm text-slate-400">
         <span>{title}</span>
-        <span>Question {i + 1} of {questions.length} · Score {score}</span>
+        <span>السؤال {i + 1} من {questions.length} · الدرجة {score}</span>
       </div>
-      <div className="mb-6 h-1.5 overflow-hidden rounded-full bg-white/10">
+      <div className="mb-6 h-2 overflow-hidden rounded-full bg-white/10">
         <div className={`${grad} h-full transition-all duration-500`} style={{ width: `${((i + (answered ? 1 : 0)) / questions.length) * 100}%` }} />
       </div>
-      <h3 className="text-lg font-semibold text-white sm:text-xl">{q.q}</h3>
+      <h3 className="text-xl font-bold leading-relaxed text-white sm:text-2xl">{q.q}</h3>
       <div className="mt-5 grid gap-3">
         {q.options.map((o, k) => (
           <button key={o} onClick={() => pick(k)} disabled={answered}
-            className={`flex items-center justify-between rounded-xl border px-4 py-3 text-left text-sm transition ${optStyle(k)}`}>
+            className={`flex items-center justify-between rounded-2xl border px-4 py-3.5 text-start text-base transition ${optStyle(k)}`}>
             <span>{o}</span>
             {answered && k === q.answer && <CheckCircle2 className="h-5 w-5 shrink-0" />}
             {answered && k === sel && k !== q.answer && <XCircle className="h-5 w-5 shrink-0" />}
@@ -70,12 +70,12 @@ export default function Quiz({ title, questions, backHref, backLabel = "Back" })
         ))}
       </div>
       {answered && (
-        <div className="mt-5 rounded-xl border border-white/10 bg-ink-2/80 p-4 text-sm" role="status">
-          <p className={sel === q.answer ? "font-semibold text-emerald-300" : "font-semibold text-rose-300"}>
-            {sel === q.answer ? "Correct!" : "Not quite."}
+        <div className="mt-5 rounded-2xl border border-white/10 bg-ink-2/80 p-4" role="status">
+          <p className={sel === q.answer ? "font-bold text-emerald-300" : "font-bold text-rose-300"}>
+            {sel === q.answer ? "إجابة صحيحة! 🎉" : "إجابة غير صحيحة، حاول مرة أخرى في السؤال القادم."}
           </p>
           <p className="mt-1 text-slate-300">{q.why}</p>
-          <button onClick={next} className={`${btn} mt-4`}>{i + 1 === questions.length ? "See results" : "Next question"}</button>
+          <button onClick={next} className={`${btn} mt-4`}>{i + 1 === questions.length ? "عرض النتيجة" : "السؤال التالي"}</button>
         </div>
       )}
     </div>

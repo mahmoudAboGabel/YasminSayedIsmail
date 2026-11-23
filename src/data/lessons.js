@@ -1,411 +1,226 @@
+// الدروس المعروضة في الموقع حاليًا (غيّر الرقم لما تضيف دروس أكتر)
+
 export const unit = {
-  title: "Support and Movement in Plants and Humans",
+  title: "العلوم للصف الرابع الابتدائي",
   cognitive: [
-    "Distinguish physiological support from structural support in plants.",
-    "Identify the bones and regions of the human axial and appendicular skeleton.",
-    "Explain the types of plant movement and the role of hormones such as auxin.",
-    "Describe the sliding filament mechanism of muscle contraction.",
+    "يقارن بين التربة الرملية والتربة الطينية من حيث تسرب الماء.",
+    "يفسر كيف استخدم المصريون القدماء تجميع القوى وتقليل الاحتكاك.",
+    "يذكر خطوات البحث الاستقصائي الست ويطبق قاعدة التجربة العادلة.",
+    "يستخدم الترمومتر والبوصلة وبطاقة الملاحظة بطريقة صحيحة.",
   ],
   affective: [
-    "Appreciate how structure fits function in living organisms.",
-    "Value care for bones and muscles through exercise and balanced nutrition.",
-    "Show curiosity and respect for plant life and its responses to the environment.",
+    "يقدّر ذكاء المصريين القدماء في استخدام العلم.",
+    "يلتزم بالدقة والأمانة عند تسجيل الملاحظات.",
+    "يتعاون مع زملائه أثناء تنفيذ التجارب.",
   ],
   psychomotor: [
-    "Label diagrams of the skeleton, sarcomere and plant tissues accurately.",
-    "Observe cytoplasmic streaming in Elodea under a microscope.",
-    "Design a simple experiment to test phototropism or geotropism.",
+    "ينفذ تجربة مقارنة تسرب الماء في الرمل والطين.",
+    "يقيس درجة حرارة الهواء والأرض باستخدام الترمومتر.",
+    "يملأ بطاقة ملاحظة لكائن أو ظاهرة من حوله.",
   ],
 };
+
+// ملحوظة: src فاضي = يظهر مربع فاضي. حط مسار الصورة أو الفيديو بتاعك.
+const m = (label, type = "image") => ({ label, src: "", type });
 
 export const lessons = [
   {
     id: 1,
-    icon: "Leaf",
-    title: "Plant Support",
-    tagline: "How plants stand tall without a skeleton.",
+    icon: "Layers",
+    title: "التربة وحجم الحبيبات وتسرب الماء",
+    tagline: "أي تربة تحتفظ بالماء وأي تربة تُسرّبه بسرعة؟",
     objectives: [
-      "Differentiate physiological from structural support.",
-      "Explain the role of turgor pressure in herbaceous plants.",
-      "Describe the function of cellulose, lignin, cutin and suberin.",
+      "يقارن بين التربة الرملية والطينية من حيث حجم الحبيبات.",
+      "يفسر سبب اختلاف سرعة تسرب الماء في كل نوع.",
+      "ينفذ تجربة لمقارنة تسرب الماء.",
     ],
     sections: [
       {
-        h: "Structural support",
-        text: "Structural support is permanent and relies on the deposition of rigid or waterproof substances on or within plant cell walls. This gives tissues high tensile strength and elasticity to withstand wind, gravity, and mechanical stress.",
+        h: "أنواع التربة",
+        text: "تختلف أنواع التربة في قدرتها على الاحتفاظ بالماء أو تسريبه، وذلك حسب حجم حبيباتها.",
         items: [
-          [
-            "Cellulose",
-            "A complex carbohydrate forming the main framework of primary cell walls in parenchyma and collenchyma. It provides flexibility and high resistance to stretching.",
-          ],
-          [
-            "Lignin",
-            "A hard, complex polymer deposited on secondary cell walls of sclerenchyma (fibres and stone cells) and xylem vessels. It makes walls rigid and waterproof; mature lignified cells are dead.",
-          ],
-          [
-            "Cutin",
-            "A waxy, waterproof lipid deposited on the outer walls of epidermal cells to form the cuticle, preventing excessive water loss by transpiration.",
-          ],
-          [
-            "Suberin",
-            "An impermeable fatty substance deposited in cork cell walls (periderm) and the root endodermis (Casparian strip) to seal and protect older stems and roots.",
-          ],
-        ],
-        media: {
-          label: "Diagram: Plant supporting tissues & wall substances",
-          src: "/images/Gemini_Generated_Image_77og7f77og7f77og.jpeg",
-          type: "image",
-        },
+          ["🏜️ التربة الرملية", "حبيباتها كبيرة الحجم ومساميها واسعة، فيتسرب الماء من خلالها بسرعة كبيرة. هي نموذج للتربة الصحراوية."],
+          ["🌾 التربة الطينية", "حبيباتها صغيرة الحجم ومساميها ضيقة ومتقاربة، فيتسرب الماء ببطء شديد وتحتفظ به مدة أطول. هي نموذج لطمي النيل."],
+        ],     
+        media: { label: "مقارنة بين حبيبات الرمل وحبيبات الطين", src: "/images/Geotropism.jpg", type: "image" } ,
+
+      },      {
+        h: "الطاقة الشمسية",
+text: "تُعد الشمس مصدرًا أساسيًا للطاقة المتجددة، حيث يستفيد الإنسان من أشعتها في إنتاج الكهرباء وتوفير الحرارة. وتعتمد الخلايا الشمسية على تحويل ضوء الشمس إلى طاقة كهربائية يمكن استخدامها في تشغيل الأجهزة والمنازل.",
+items: [
+  ["☀️ تحويل الطاقة", "تستقبل الألواح الشمسية ضوء الشمس وتحوله إلى طاقة كهربائية يمكن الاستفادة منها."],
+  ["🏠 الاستخدامات", "تُستخدم الطاقة الشمسية في تشغيل المنازل والأجهزة الكهربائية وتسخين المياه."],
+  ["🌱 طاقة نظيفة", "تُعد الطاقة الشمسية مصدرًا متجددًا ونظيفًا للطاقة، وتساعد على تقليل التلوث والاعتماد على الوقود التقليدي."]
+],     
+        media: { label: "مقارنة بين حبيبات الرمل وحبيبات الطين", src: "/images/plant-movement-in-response-to-light-isolated-illustration-vector.jpg", type: "image" } ,
       },
       {
-        h: "Physiological support",
-        text: "Physiological support is temporary because it depends on water availability. Water enters the cell sap vacuole by osmosis, causing the vacuole to swell and push the cytoplasm outward against the elastic cell wall. This internal hydrostatic pressure (turgor pressure) keeps herbaceous stems and leaves firm and upright. When the plant loses more water than it absorbs, turgor pressure drops, the vacuole shrinks, and the plant wilts.",
-        items: [
-          [
-            "Turgid cell",
-            "High water content; swollen central vacuole presses tightly against the cell wall, giving rigidity.",
-          ],
-          [
-            "Flaccid / Wilted cell",
-            "Water loss reduces vacuole volume and wall tension, causing soft green shoots to droop.",
-          ],
+        h: "تجربة: مقارنة تسرب الماء",
+        text: "الأدوات: زجاجتان بلاستيكيتان، قطعة شاش، كمية من الرمل، كمية من الطين، ساعة إيقاف (مؤقت).",
+        steps: [
+          "نضع الشاش على فوهة كل زجاجة.",
+          "نضع الرمل في الزجاجة الأولى والطين في الزجاجة الثانية.",
+          "نسكب كمية متساوية من الماء في الزجاجتين في نفس الوقت.",
+          "نقيس بالمؤقت سرعة تسرب الماء في كل زجاجة ونقارن النتيجة.",
         ],
-        media: {
-          label: "Diagram: Turgid vs. flaccid plant cell",
-          src: "/images/images (13).jpeg",
-          type: "image",
-        },
-      },
-      {
-        h: "Video: Plant Support Mechanisms",
-        text: "Watch how osmotic water uptake and specialized cell walls work together to keep plants upright.",
-        media: {
-          label: "Plant support mechanism",
-          src: "https://www.youtube.com/embed/lC79x4c_dm4?si=imYrzmee_x_rRmmj",
-          type: "youtube",
-        },
+        note: { kind: "tip", text: "الحبيبات الكبيرة تتسرب منها المياه بسرعة، والحبيبات الصغيرة تحتفظ بالماء وقتًا أطول." },
+        media: { label: "Muscle contraction", src: "https://www.youtube.com/embed/yB4P_bwWUGs?si=rTzvt461yrH0eX70", type: "youtube" } ,
       },
     ],
     pretest: [
-      { q: "What happens to a non-woody plant that loses water?", options: ["It grows taller", "It wilts", "It makes more lignin", "It turns woody"], answer: 1, why: "Loss of water lowers turgor pressure, so soft tissues go limp." },
-      { q: "Which tissue carries water up the stem?", options: ["Phloem", "Xylem", "Epidermis", "Cork"], answer: 1, why: "Xylem conducts water and minerals from roots to leaves." },
-      { q: "What is the main job of the plant cell wall?", options: ["Make ATP", "Store DNA", "Give shape and protection", "Absorb light"], answer: 2, why: "The wall shapes the cell and resists bursting." },
+      { q: "أي تربة حبيباتها كبيرة الحجم؟", options: ["الطينية", "الرملية", "كلاهما", "لا شيء مما سبق"], answer: 1, why: "التربة الرملية حبيباتها كبيرة ومساميها واسعة." },
+      { q: "أي تربة تحتفظ بالماء وقتًا أطول؟", options: ["الرملية", "الصحراوية", "الطينية", "الجافة"], answer: 2, why: "مسام الطين ضيقة فيتسرب منها الماء ببطء." },
+      { q: "التربة الصحراوية هي نموذج للتربة:", options: ["الرملية", "الطينية", "الطمي", "الزراعية"], answer: 0, why: "الصحراء تربتها رملية." },
     ],
     quiz: [
-      { q: "Which force keeps herbaceous plant cells firm?", options: ["Gravity", "Turgor pressure", "Osmosis in roots only", "Transpiration"], answer: 1, why: "Water pressing the cytoplasm against the wall is turgor pressure." },
-      { q: "Which substance forms the waxy cuticle?", options: ["Cutin", "Lignin", "Suberin", "Cellulose"], answer: 0, why: "Cutin is deposited on the outer epidermal wall." },
-      { q: "Which substance makes sclerenchyma and xylem walls rigid?", options: ["Pectin", "Cutin", "Lignin", "Starch"], answer: 2, why: "Lignin hardens and waterproofs the wall." },
-      { q: "Suberin is found in the walls of which cells?", options: ["Guard cells", "Cork cells", "Root hairs", "Palisade cells"], answer: 1, why: "Cork cells are impregnated with suberin." },
-      { q: "The primary cell wall is mainly made of:", options: ["Lignin", "Suberin", "Protein", "Cellulose"], answer: 3, why: "Cellulose microfibrils form the primary wall." },
+      { q: "حبيبات التربة الرملية تتميز بأنها:", options: ["صغيرة ومساميها ضيقة", "كبيرة ومساميها واسعة", "ناعمة جدًا", "لا مسام لها"], answer: 1, why: "حبيبات الرمل كبيرة ومساميها واسعة." },
+      { q: "أي تربة تُعد نموذجًا لطمي النيل؟", options: ["الرملية", "الصخرية", "الطينية", "الجيرية"], answer: 2, why: "طمي النيل تربة طينية." },
+      { q: "لماذا يتسرب الماء ببطء في التربة الطينية؟", options: ["لأن مساميها ضيقة ومتقاربة", "لأن حبيباتها كبيرة", "لأنها جافة", "لأنها ساخنة"], answer: 0, why: "المسام الضيقة المتقاربة تبطئ مرور الماء." },
+      { q: "ماذا نضع على فوهة الزجاجة قبل وضع الرمل أو الطين؟", options: ["ورقًا", "شاشًا", "حجرًا", "قماشًا سميكًا"], answer: 1, why: "نضع الشاش على فوهة كل زجاجة." },
+      { q: "أي أداة نستخدمها لقياس سرعة تسرب الماء؟", options: ["الترمومتر", "البوصلة", "ساعة الإيقاف", "المسطرة"], answer: 2, why: "نقيس زمن التسرب بالمؤقت (ساعة الإيقاف)." },
     ],
   },
   {
     id: 2,
-    icon: "Bone",
-    title: "Human Support: The Skeletal System",
-    tagline: "206 bones that shape, protect and move the body.",
+    icon: "Landmark",
+    title: "تطبيقات الفيزياء عند المصريين القدماء",
+    tagline: "كيف حرّك القدماء التماثيل الضخمة بلا آلات حديثة؟",
     objectives: [
-      "Divide the skeleton into axial and appendicular parts.",
-      "Name the main bones of the skull, vertebral column and thoracic cage.",
-      "Distinguish tendons from ligaments.",
+      "يوضح معنى تجميع القوى (القوة المحصلة).",
+      "يفسر كيف يقلل الماء الاحتكاك.",
+      "يربط بين الفيزياء وما فعله المصريون القدماء.",
     ],
     sections: [
       {
-        h: "Axial skeleton (80 bones)",
-        text: "Forms the central longitudinal axis of the body. It supports the head, neck, and trunk, and encloses vital organs such as the brain, spinal cord, heart, and lungs.",
-        items: [
-          [
-            "Skull (22 bones)",
-            "Divided into the cranium (8 interlocking bones joined at serrated sutures to protect the brain) and the facial skeleton (14 bones forming the jaws, orbits, and nasal cavity), plus 6 ear ossicles and the hyoid bone.",
-          ],
-          [
-            "Vertebral column (33 vertebrae / 26 bones)",
-            "Acts as the main weight-bearing pillar and protects the spinal cord: 7 cervical (neck), 12 thoracic (chest), 5 lumbar (largest, lower back), 5 fused sacral (sacrum), and 4 fused coccygeal (coccyx).",
-          ],
-          [
-            "Thoracic cage (25 bones)",
-            "Composed of 12 pairs of curved ribs (7 true, 3 false, 2 floating) attached posteriorly to thoracic vertebrae and anteriorly to the flat sternum, enabling breathing movements.",
-          ],
-        ],
-        media: {
-          label: "Diagram: Axial skeleton (Skull, Vertebral Column, Thoracic Cage)",
-          src: "/images/Gemini_Generated_Image_6qysaw6qysaw6qys.jpeg",
-          type: "image",
-        },
+        h: "تجميع القوى (القوة المحصلة)",
+        text: "استخدم المصريون القدماء مبادئ الفيزياء بذكاء لتحريك التماثيل الضخمة والأحجار الثقيلة. كانوا يسحبون التمثال بعدد كبير من الأشخاص معًا في اتجاه واحد، فتتضاعف قوة السحب وتتغلب على وزن التمثال الثقيل.",
+       media: { label: "مقارنة بين حبيبات الرمل وحبيبات الطين", src: "/images/egypt_forces-12iKU3CS.jpg", type: "image" } ,
+
+      },      {
+        h: "الاهرامات العظيمة",
+text: "استخدم المصريون القدماء مبادئ الفيزياء والهندسة في بناء الأهرامات ونقل الأحجار الضخمة. فقد اعتمدوا على أدوات بسيطة مثل المنحدرات الخشبية والحبال، واستعانوا بقوة عدد كبير من العمال لسحب الكتل الحجرية وتحريكها، كما استفادوا من مبادئ القوة والاحتكاك والاتزان لتسهيل نقل الأحجار ورفعها أثناء عملية البناء.",
+       media: { label: "مقارنة بين حبيبات الرمل وحبيبات الطين", src: "/images/12.jpeg", type: "image" } ,
       },
       {
-        h: "Appendicular skeleton (126 bones)",
-        text: "Consists of the upper and lower limbs along with the shoulder and hip girdles that anchor them to the axial skeleton, enabling locomotion and manipulation.",
-        items: [
-          [
-            "Pectoral (shoulder) girdle",
-            "Two clavicles (collarbones) and two triangular scapulae (shoulder blades); provides a shallow glenoid cavity for wide arm mobility.",
-          ],
-          [
-            "Pelvic girdle",
-            "Two hip bones (each formed by fused ilium, ischium, and pubis) joined anteriorly at the pubic symphysis; supports upper body weight and houses the deep acetabulum socket.",
-          ],
-          [
-            "Upper limb (30 bones each)",
-            "Humerus (upper arm), radius and ulna (forearm), 8 carpals (wrist), 5 metacarpals (palm), and 14 phalanges (fingers).",
-          ],
-          [
-            "Lower limb (30 bones each)",
-            "Femur (longest/strongest bone), patella (kneecap), tibia and fibula (lower leg), 7 tarsals (ankle, including the heel calcaneus), 5 metatarsals, and 14 phalanges.",
-          ],
-        ],
-        media: {
-          label: "Diagram: Appendicular skeleton (Girdles & Limbs)",
-          src: "/images/images (14).jpeg",
-          type: "image",
-        },
-      },
-      {
-        h: "Cartilage, Joints, Tendons, and Ligaments",
-        text: "Supporting connective tissues work alongside bones to allow smooth articulation, shock absorption, and force transmission.",
-        items: [
-          [
-            "Tendons",
-            "Tough, inelastic bands of fibrous connective tissue that attach skeletal muscles to bones and transmit pulling forces (e.g., Achilles tendon).",
-          ],
-          [
-            "Ligaments",
-            "Strong, slightly elastic fibrous bands that connect bone to bone across joints, guiding movement and preventing dislocation.",
-          ],
-          [
-            "Cartilage & Joints",
-            "Avascular cartilage cushions bone ends against friction, while synovial, cartilaginous, and fibrous joints determine the range of motion.",
-          ],
-        ],
-        media: {
-          label: "Diagram: Joint structure, tendons & ligaments",
-          src: "/images/4B-206-Bones-1232W.jpg",
-          type: "image",
-        },
-      },
-      {
-        h: "Video: Overview of the Human Skeleton",
-        text: "Explore the 3D organization of the axial and appendicular bones.",
-        media: {
-          label: "Skeletal system overview",
-          src: "https://www.youtube.com/embed/ywDOiNEdJVc?si=hYWlYIoP9dK1R-s4",
-          type: "youtube",
-        },
+        h: "تقليل الاحتكاك",
+        text: "كانوا يسكبون الماء على الرمال أمام الزلاجة التي تحمل التمثال. الماء يجعل حبيبات الرمل متماسكة ويقلل قوة الاحتكاك بين الزلاجة والأرض، فتنزلق الزلاجة ويسهل سحبها.",
+        note: { kind: "tip", text: "حركة واحدة ذكية: قوة أكبر بالتعاون + احتكاك أقل بالماء = سحب أسهل." },
+        media: { label: "Muscle contraction", src: "https://www.youtube.com/embed/KKWGeYXcCQI?si=JPKwPMAnAywT9Toi", type: "youtube" } ,
       },
     ],
     pretest: [
-      { q: "Which bone group protects the brain?", options: ["Ribs", "Cranium", "Pelvis", "Vertebrae"], answer: 1, why: "The cranial bones enclose the brain." },
-      { q: "What connects muscle to bone?", options: ["Ligament", "Cartilage", "Tendon", "Nerve"], answer: 2, why: "Tendons attach muscles to bones." },
-      { q: "About how many bones does an adult have?", options: ["106", "206", "306", "406"], answer: 1, why: "The adult skeleton has 206 bones." },
+      { q: "ما القوة التي تعيق انزلاق الزلاجة على الأرض؟", options: ["الجاذبية", "الاحتكاك", "المغناطيسية", "الضوء"], answer: 1, why: "الاحتكاك قوة تعيق حركة الأجسام على الأسطح." },
+      { q: "عندما يسحب عدة أشخاص جسمًا في اتجاه واحد فإن قوة السحب:", options: ["تقل", "تنعدم", "تزداد", "لا تتغير"], answer: 2, why: "القوى في نفس الاتجاه تتجمع فتزداد القوة." },
+      { q: "من استخدم الفيزياء قديمًا لنقل الأحجار الثقيلة؟", options: ["المصريون القدماء", "الرومان فقط", "لا أحد", "الفضاء"], answer: 0, why: "المصريون القدماء نقلوا التماثيل والأحجار الضخمة." },
     ],
     quiz: [
-      { q: "How many bones are in the adult skeleton?", options: ["206", "180", "250", "300"], answer: 0, why: "80 axial + 126 appendicular = 206." },
-      { q: "Which bone belongs to the axial skeleton?", options: ["Femur", "Scapula", "Sternum", "Humerus"], answer: 2, why: "The sternum is part of the thoracic cage." },
-      { q: "How many cervical vertebrae are there?", options: ["5", "7", "12", "4"], answer: 1, why: "The neck has 7 cervical vertebrae." },
-      { q: "Which tissue connects bone to bone?", options: ["Tendons", "Muscles", "Ligaments", "Skin"], answer: 2, why: "Ligaments join bones at joints." },
-      { q: "The pectoral girdle consists of:", options: ["Ilium and ischium", "Clavicle and scapula", "Ribs and sternum", "Femur and tibia"], answer: 1, why: "Clavicle plus scapula on each side." },
+      { q: "كيف حرّك المصريون القدماء التماثيل الضخمة؟", options: ["بآلات حديثة", "بسحبها بعدد كبير من الأشخاص في اتجاه واحد", "بدفعها لأعلى", "بحرقها"], answer: 1, why: "اعتمدوا على تجميع قوى كثيرين في اتجاه واحد." },
+      { q: "ماذا يحدث لقوة السحب عند تجميع القوى؟", options: ["تتضاعف", "تقل", "تختفي", "تتحول إلى حرارة"], answer: 0, why: "تجميع القوى يضاعف قوة السحب." },
+      { q: "لماذا سكبوا الماء على الرمال أمام الزلاجة؟", options: ["لتنظيفها", "لتقليل الاحتكاك", "لتبريد التمثال", "لزيادة الوزن"], answer: 1, why: "الماء يقلل الاحتكاك بين الزلاجة والأرض." },
+      { q: "ماذا يفعل الماء بحبيبات الرمل؟", options: ["يفرقها", "يحرقها", "يجعلها متماسكة", "يحولها إلى طين"], answer: 2, why: "الماء يجعل الحبيبات تتماسك فتسهل الحركة." },
+      { q: "حتى تتجمع القوى، يجب أن يسحب الأشخاص في:", options: ["اتجاهات مختلفة", "اتجاه واحد", "اتجاهين متعاكسين", "دوائر"], answer: 1, why: "القوة المحصلة أكبر عندما تكون القوى في اتجاه واحد." },
     ],
   },
   {
     id: 3,
-    icon: "Sprout",
-    title: "Plant Movement",
-    tagline: "Plants move too: by growth, by water and by touch.",
+    icon: "FlaskConical",
+    title: "البحث الاستقصائي والتجربة العادلة",
+    tagline: "اعمل مثل العلماء: خطوات منظمة لإجابات دقيقة.",
     objectives: [
-      "Describe touch and sleep movements.",
-      "Compare types of tropism and name the stimulus of each.",
-      "Explain pulling movements in tendrils and bulbs and streaming in Elodea.",
+      "يذكر خطوات البحث الاستقصائي الست بالترتيب.",
+      "يفسر معنى التجربة العادلة.",
+      "يحدد العامل المتغير والعوامل الثابتة في تجربة.",
     ],
     sections: [
       {
-        h: "Touch and sleep movements (Turgor-driven)",
-        text: "Rapid, reversible nastic movements triggered by sudden changes in water pressure within specialized motor organs called pulvini at the base of leaflets.",
-        items: [
-          [
-            "Touch movement (Mimosa pudica)",
-            "Mechanical touch triggers ion efflux and rapid water loss from lower pulvinus cells, causing leaflets to fold and petioles to droop within seconds. Turgor recovers once the stimulus stops.",
-          ],
-          [
-            "Sleep movements (Nyctinasty)",
-            "Legumes such as clover and Mimosa fold their leaflets together at dusk (darkness) and spread them open at dawn (light) due to rhythmic shifts in pulvinus turgor.",
-          ],
+        h: "خطوات البحث الاستقصائي الست",
+        text: "يتبع العلماء خطوات منظمة للوصول إلى إجابات علمية دقيقة:",
+        steps: [
+          "طرح السؤال: تحديد المشكلة أو الظاهرة المراد دراستها.",
+          "التوقع (الفرضية): وضع تخمين علمي محتمل للإجابة عن السؤال.",
+          "التخطيط: تحديد الأدوات والخطوات اللازمة لإجراء التجربة.",
+          "التجربة والملاحظة: تنفيذ التجربة ومراقبة ما يحدث بدقة.",
+          "تنظيم البيانات: تسجيل النتائج في جداول أو رسوم بيانية لتسهيل قراءتها.",
+          "الاستنتاج: تفسير النتائج وتحديد هل تدعم التوقع أم لا.",
         ],
-        media: {
-          label: "Diagram: Touch and sleep movement in Mimosa",
-          src: "/images/Gemini_Generated_Image_8oo1a28oo1a28oo1.jpeg",
-          type: "image",
-        },
+        media: m("رسم: خطوات البحث الاستقصائي"),
       },
       {
-        h: "Tropism (Directional growth)",
-        text: "Slow, irreversible directional curvature of a plant organ toward (positive) or away from (negative) an external stimulus. It occurs due to unequal distribution of the plant hormone auxin (IAA), causing uneven cell elongation on opposite sides.",
+        h: "قاعدة التجربة العادلة",
+        text: "لكي تكون التجربة عادلة وصحيحة، نغيّر عاملًا (متغيرًا) واحدًا فقط أثناء التجربة، ونثبّت باقي العوامل.",
         items: [
-          [
-            "Phototropism",
-            "Auxin migrates to the shaded side of a stem, stimulating faster cell elongation there so the shoot bends toward light (positively phototropic).",
-          ],
-          [
-            "Geotropism (Gravitropism)",
-            "Gravity causes auxin to accumulate on the lower side; high auxin stimulates elongation in shoots (growing upward, negative) but inhibits elongation in roots (growing downward, positive).",
-          ],
-          [
-            "Hydrotropism",
-            "Roots curve and grow toward regions of higher soil moisture (positive hydrotropism) to maximize water absorption.",
-          ],
-          [
-            "Thigmotropism",
-            "Directional coiling in response to physical contact, seen when climbing tendrils touch a solid support.",
-          ],
+          ["مثال: تأثير حجم الشراع على سرعة القارب", "نغيّر حجم الشراع فقط."],
+          ["العوامل التي نثبّتها", "قوة الرياح، ووزن القارب، وشكل الهيكل."],
         ],
-        media: {
-          label: "Diagram: Auxin distribution and types of tropism",
-          src: "/images/plant-movement-in-response-to-light-isolated-illustration-vector.jpg",
-          type: "image",
-        },
-      },
-      {
-        h: "Pulling movements",
-        text: "Specialized growth movements that anchor climbing stems or position underground storage organs at an optimal soil depth.",
-        items: [
-          [
-            "Climbing tendrils",
-            "When a tendril touches a support, cells on the outer side grow faster than the inner side, coiling the tendril tightly. The free region then twists into a spring-like spiral that pulls the stem upright toward the support; it later lignifies for permanent strength.",
-          ],
-          [
-            "Contractile roots in bulbs & corms",
-            "Specialized roots grow downward and then shorten vertically, pulling the bulb or corm deeper into the soil to protect it from heat, frost, and herbivores.",
-          ],
-        ],
-        media: {
-          label: "Diagram: Tendril coiling and contractile roots in bulbs",
-          src: "/images/462457_1_En_29_Fig10_HTML.jpg",
-          type: "image",
-        },
-      },
-      {
-        h: "Cytoplasmic streaming in Elodea",
-        text: "Continuous circular flow (cyclosis) of the cytoplasm around the large central vacuole inside living plant cells. Driven by actin filaments and myosin motor proteins, it distributes nutrients, enzymes, and organelles—easily observed under a light microscope by tracking moving green chloroplasts in Elodea leaves.",
-        media: {
-          label: "Diagram: Cytoplasmic streaming in Elodea leaf cells",
-          src: "/images/Geotropism.jpg",
-          type: "image",
-        },
-      },
-      {
-        h: "Video: Cytoplasmic Streaming Under the Microscope",
-        text: "Observe chloroplasts moving along the cytoplasmic stream in living Elodea cells.",
-        media: {
-          label: "Cytoplasmic streaming in Elodea",
-          src: "https://www.youtube.com/embed/4D8tg3sY8MA?si=2tXpr83M6Up60Nf4",
-          type: "youtube",
-        },
+        note: { kind: "warn", text: "إذا غيّرنا أكثر من عامل، لن نعرف أي عامل سبّب النتيجة!" },
+        media: m("صورة: قوارب بأحجام أشرعة مختلفة"),
       },
     ],
     pretest: [
-      { q: "A shoot bends towards a window. This is:", options: ["Geotropism", "Phototropism", "Hydrotropism", "Chemotropism"], answer: 1, why: "Growth towards light is phototropism." },
-      { q: "Which organelle makes leaves green?", options: ["Nucleus", "Mitochondrion", "Chloroplast", "Vacuole"], answer: 2, why: "Chloroplasts contain chlorophyll." },
-      { q: "Do plants show movement?", options: ["Never", "Only seeds", "Yes, in many ways", "Only trees"], answer: 2, why: "Plants move by growth and by changes in turgor." },
+      { q: "كم عدد خطوات البحث الاستقصائي؟", options: ["3", "4", "6", "10"], answer: 2, why: "الخطوات ست: سؤال، توقع، تخطيط، تجربة وملاحظة، تنظيم بيانات، استنتاج." },
+      { q: "التوقع (الفرضية) هو:", options: ["نتيجة نهائية", "تخمين علمي محتمل", "أداة قياس", "جدول بيانات"], answer: 1, why: "التوقع تخمين علمي للإجابة عن السؤال." },
+      { q: "الاستنتاج هو:", options: ["تفسير النتائج", "طرح السؤال", "شراء الأدوات", "رسم الجداول فقط"], answer: 0, why: "الاستنتاج تفسير للنتائج وهل تدعم التوقع." },
     ],
     quiz: [
-      { q: "Mimosa leaflets fold after touch because of:", options: ["Loss of turgor in pulvinus cells", "Cell division", "Photosynthesis", "Lignin"], answer: 0, why: "Water leaves pulvinus cells, so they collapse." },
-      { q: "Roots growing downward show:", options: ["Negative phototropism", "Positive geotropism", "Hydrotropism only", "Nastic movement"], answer: 1, why: "Roots respond to gravity by growing down." },
-      { q: "Which hormone mainly controls phototropism?", options: ["Insulin", "Auxin", "Adrenaline", "Acetylcholine"], answer: 1, why: "Auxin builds up on the shaded side." },
-      { q: "Tendrils coil around supports in response to:", options: ["Light", "Gravity", "Contact", "Water"], answer: 2, why: "Contact stimulus (thigmotropism)." },
-      { q: "In Elodea, what is carried by streaming cytoplasm?", options: ["Chloroplasts", "Ribs", "Hormones only", "Cell walls"], answer: 0, why: "Moving chloroplasts make the flow visible." },
+      { q: "ما أول خطوة في البحث الاستقصائي؟", options: ["الاستنتاج", "طرح السؤال", "التخطيط", "تنظيم البيانات"], answer: 1, why: "نبدأ بتحديد المشكلة أو الظاهرة بسؤال." },
+      { q: "وضع تخمين علمي محتمل للإجابة يسمى:", options: ["التوقع (الفرضية)", "الاستنتاج", "الملاحظة", "التخطيط"], answer: 0, why: "هذا هو التوقع أو الفرضية." },
+      { q: "تسجيل النتائج في جداول أو رسوم بيانية هو:", options: ["التجربة", "الاستنتاج", "تنظيم البيانات", "طرح السؤال"], answer: 2, why: "تنظيم البيانات يسهّل قراءة النتائج." },
+      { q: "في التجربة العادلة نغيّر:", options: ["كل العوامل", "عاملًا واحدًا فقط", "عاملين", "لا شيء"], answer: 1, why: "نغيّر عاملًا واحدًا ونثبّت الباقي." },
+      { q: "عند اختبار تأثير حجم الشراع على سرعة القارب، أي عامل نثبّته؟", options: ["حجم الشراع", "قوة الرياح", "الشراع والرياح معًا", "لا شيء"], answer: 1, why: "نثبّت قوة الرياح ووزن القارب وشكل الهيكل." },
     ],
   },
   {
     id: 4,
-    icon: "Activity",
-    title: "Human Movement & Muscle Contraction",
-    tagline: "From nerve impulse to sliding filaments.",
+    icon: "Thermometer",
+    title: "أدوات الملاحظة وتسجيل البيانات",
+    tagline: "الترمومتر والبوصلة وبطاقة الملاحظة.",
     objectives: [
-      "Label the structure of a sarcomere.",
-      "Explain the roles of acetylcholine, calcium and ATP.",
-      "Describe the sliding filament theory and the cause of muscle fatigue.",
+      "يستخدم الترمومتر لقياس حرارة الهواء والأرض.",
+      "يستخدم البوصلة لتحديد الاتجاهات.",
+      "يسجل ملاحظاته في بطاقة ملاحظة.",
     ],
     sections: [
       {
-        h: "Sarcomere structure",
-        text: "A skeletal muscle consists of bundles of multinucleated muscle fibres packed with myofibrils. Each myofibril is divided into repeating contractile units called sarcomeres, bounded by two dark Z lines.",
+        h: "🌡️ الترمومتر (قياس درجة الحرارة)",
+        text: "يستخدمه الباحثون لقياس درجة الحرارة بدقة.",
         items: [
-          [
-            "Thin filaments (Actin)",
-            "Anchored to the Z lines; composed of actin protein intertwined with regulatory proteins troponin and tropomyosin that block myosin-binding sites at rest.",
-          ],
-          [
-            "Thick filaments (Myosin)",
-            "Located in the centre of the sarcomere; feature globular myosin heads with ATP-binding and actin-binding sites that form cross-bridges.",
-          ],
-          [
-            "Bands and Zones",
-            "Dark A band (entire length of thick myosin filaments), Light I band (thin actin filaments only), H zone (central region of A band with myosin only), and M line (bisects the H zone).",
-          ],
+          ["حرارة الهواء", "يوضع على ارتفاع من 1.2 إلى 1.5 متر عن سطح الأرض."],
+          ["حرارة الأرض", "يوضع في مكان مظلل (في الظل) لتجنب أشعة الشمس المباشرة."],
         ],
-        media: {
-          label: "Diagram: Sarcomere bands, actin & myosin filaments",
-          src: "/images/Gemini_Generated_Image_89hd1g89hd1g89hd.jpeg",
-          type: "image",
-        },
+        note: { kind: "warn", text: "لا تلمس مستودع الترمومتر (البصيلة الزجاجية) بيدك أثناء القياس، حتى لا تؤثر حرارة جسمك على القراءة." },
+        media: m("صورة: الترمومتر وطريقة استخدامه"),
       },
       {
-        h: "Nerve impulse and acetylcholine",
-        text: "Excitation-contraction coupling begins when a nerve impulse arrives at the motor neuron axon terminal (neuromuscular junction). Voltage-gated calcium channels open, triggering synaptic vesicles to release acetylcholine (ACh) into the synaptic cleft. ACh binds to receptors on the muscle membrane (sarcolemma), opening Na⁺ channels and generating a muscle action potential. This wave travels down T-tubules to the sarcoplasmic reticulum, releasing stored Ca²⁺ ions into the sarcoplasm. Ca²⁺ binds to troponin, shifting tropomyosin away and exposing the active binding sites on actin.",
-        media: {
-          label: "Diagram: Neuromuscular junction & Calcium release",
-          src: "/images/images (15).jpeg",
-          type: "image",
-        },
+        h: "🧭 البوصلة (تحديد الاتجاهات)",
+        text: "نضع البوصلة بشكل أفقي مستوٍ تمامًا، ثم ندير البوصلة حتى ينطبق المؤشر الأحمر على حرف N (الشمال).",
+        note: { kind: "warn", text: "أبعد البوصلة عن المعادن والهواتف المحمولة والأجهزة المغناطيسية، لأنها تؤثر على الإبرة وتعطي اتجاهات خاطئة." },
+        media: m("صورة: البوصلة والمؤشر الأحمر على الشمال"),
       },
       {
-        h: "Sliding filament theory (Huxley)",
-        text: "Proposed by Hugh Huxley, this theory explains that muscles shorten not because protein filaments shrink, but because thin actin filaments slide inward over thick myosin filaments toward the M line.",
+        h: "📝 بطاقة الملاحظة (تسجيل البيانات)",
+        text: "تُستخدم لتوثيق المشاهدات العلمية بدقة. من عناصرها:",
         items: [
-          [
-            "Cross-bridge cycle & Power stroke",
-            "Energized myosin heads bind exposed actin sites to form cross-bridges and pivot inward, pulling Z lines closer together (narrowing the I band and H zone while the A band stays constant).",
-          ],
-          [
-            "Role of ATP",
-            "Fresh ATP binds to myosin heads to detach them from actin; ATP hydrolysis then re-energizes (cocks) the myosin head for the next cycle. When stimulation stops, Ca²⁺ is actively pumped back into the sarcoplasmic reticulum using ATP.",
-          ],
+          ["العنوان", "اسم الكائن أو الظاهرة التي تتم ملاحظتها."],
+          ["التاريخ والوقت والاسم", "متى تمت الملاحظة ومن قام بها."],
+          ["الخصائص", "وصف الشكل واللون والحجم أو الصفات المميزة."],
+          ["مكان العثور", "البيئة أو الموقع الذي وُجد فيه الشيء."],
         ],
-        media: {
-          label: "Diagram: Sliding filament cross-bridge cycle",
-          src: "/images/images (16).jpeg",
-          type: "image",
-        },
-      },
-      {
-        h: "Muscle fatigue and spasm",
-        text: "During intense or prolonged exercise, oxygen delivery cannot keep pace with energy demand. Muscle fibres switch from aerobic respiration to anaerobic glycolysis, yielding only 2 ATP per glucose and accumulating lactic acid. Low ATP and high acidity impair cross-bridge cycling and enzyme activity, causing muscle fatigue. In extreme ATP depletion, myosin heads fail to detach from actin, resulting in painful muscle spasms. Rest restores oxygen supply to oxidize accumulated lactic acid.",
-        media: {
-          label: "Diagram: Aerobic vs. Anaerobic respiration & muscle fatigue",
-          src: "/images/infographic-of-the-composition-of-muscle-fiber-and-the-movement-of-contraction-and-relaxation-of-muscles-quarkxpress-qxp-6259x4015-2NEBNAW.jpg",
-          type: "image",
-        },
-      },
-      {
-        h: "Video: Sliding Filament Mechanism",
-        text: "Watch the step-by-step molecular animation of calcium release, cross-bridge cycling, and sarcomere shortening.",
-        media: {
-          label: "Sliding filament contraction",
-          src: "https://www.youtube.com/embed/VVL-8zr2hk4?si=DDECBeIOzMSgjhSr",
-          type: "youtube",
-        },
+        media: m("صورة: نموذج بطاقة ملاحظة"),
       },
     ],
     pretest: [
-      { q: "Which muscle type moves the skeleton?", options: ["Cardiac", "Smooth", "Skeletal", "None"], answer: 2, why: "Skeletal muscle attaches to bones." },
-      { q: "Which molecule is the cell's energy currency?", options: ["DNA", "ATP", "Cellulose", "Lignin"], answer: 1, why: "ATP supplies energy for contraction." },
-      { q: "Which proteins form muscle filaments?", options: ["Actin and myosin", "Keratin and collagen", "Insulin and glucagon", "Amylase and lipase"], answer: 0, why: "Actin (thin) and myosin (thick)." },
+      { q: "أي أداة نقيس بها درجة الحرارة؟", options: ["البوصلة", "الترمومتر", "المسطرة", "الميزان"], answer: 1, why: "الترمومتر يقيس درجة الحرارة." },
+      { q: "أي أداة نحدد بها الاتجاهات؟", options: ["الترمومتر", "المجهر", "البوصلة", "الساعة"], answer: 2, why: "البوصلة تحدد الاتجاهات والشمال." },
+      { q: "بطاقة الملاحظة تُستخدم في:", options: ["قياس الوزن", "توثيق المشاهدات العلمية", "تحديد الاتجاه", "قياس الزمن"], answer: 1, why: "نسجل فيها ما نلاحظه بدقة." },
     ],
     quiz: [
-      { q: "The functional unit of muscle contraction is the:", options: ["Neuron", "Sarcomere", "Ligament", "Osteocyte"], answer: 1, why: "The sarcomere lies between two Z lines." },
-      { q: "Which neurotransmitter acts at the neuromuscular junction?", options: ["Dopamine", "Serotonin", "Acetylcholine", "Auxin"], answer: 2, why: "Acetylcholine triggers the muscle action potential." },
-      { q: "During contraction, which distance gets shorter?", options: ["Length of actin", "Length of myosin", "Distance between Z lines", "Length of the bone"], answer: 2, why: "Filaments slide; the sarcomere shortens." },
-      { q: "What does ATP do in the cross-bridge cycle?", options: ["Detaches the myosin head and re-energises it", "Makes actin longer", "Stores calcium", "Digests lactic acid"], answer: 0, why: "ATP is needed for detachment and re-cocking." },
-      { q: "Muscle fatigue is linked to a build-up of:", options: ["Glucose", "Lactic acid", "Oxygen", "Acetylcholine"], answer: 1, why: "Anaerobic respiration produces lactic acid." },
+      { q: "على أي ارتفاع يوضع الترمومتر لقياس حرارة الهواء؟", options: ["على الأرض مباشرة", "من 1.2 إلى 1.5 متر", "10 أمتار", "تحت التربة"], answer: 1, why: "الارتفاع المناسب من 1.2 إلى 1.5 متر عن سطح الأرض." },
+      { q: "أين نضع الترمومتر لقياس حرارة الأرض؟", options: ["في الشمس", "في مكان مظلل", "في الماء", "في الثلاجة"], answer: 1, why: "نضعه في الظل لتجنب أشعة الشمس المباشرة." },
+      { q: "لماذا لا نلمس مستودع الترمومتر باليد؟", options: ["لأنه مكسور", "لأن حرارة الجسم تؤثر على القراءة", "لأنه ثقيل", "لأنه مبلل"], answer: 1, why: "حرارة اليد تغيّر القراءة الصحيحة." },
+      { q: "ينطبق المؤشر الأحمر في البوصلة على الحرف:", options: ["S", "E", "W", "N"], answer: 3, why: "N يعني الشمال." },
+      { q: "يجب إبعاد البوصلة عن:", options: ["الورق", "المعادن والهواتف المحمولة", "الماء", "الكتب"], answer: 1, why: "المعادن والأجهزة المغناطيسية تؤثر على الإبرة." },
     ],
   },
 ];
+export const visibleLessons = lessons.filter((l) => l.id <= 2);
+// الدروس المعروضة في الموقع حاليًا (غيّر الرقم لما تضيف دروس أكتر)
