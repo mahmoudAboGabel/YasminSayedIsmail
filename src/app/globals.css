@@ -1,64 +1,93 @@
+
 @import "tailwindcss";
 
 @theme {
-  /* الخلفيات: أبيض ولبني فاتح جدًا */
-  --color-ink: #ffffff;
-  --color-ink-2: #f0f9ff;
+  /* الخلفيات: ألوان البرديات والرمال */
+  --color-ink: #fffdf5;
+  --color-ink-2: #f8f0dc;
 
-  /* ألوان مميزة */
-  --color-neon-cyan: #8ecdf7;
-  --color-neon-indigo: #f9a8d4;
-  --color-neon-purple: #f472b6;
+  /* الألوان المميزة */
+  --color-neon-cyan: #38a6b8;
+  --color-neon-indigo: #d6a84f;
+  --color-neon-purple: #b77936;
 
-  /* "white" بقى لون النص الغامق، عشان الكلام يبان على الخلفية البيضاء */
-  --color-white: #1e293b;
+  /* النصوص */
+  --color-white: #3e3022;
+  --color-slate-100: #3e3022;
+  --color-slate-200: #51402d;
+  --color-slate-300: #66533b;
+  --color-slate-400: #806d52;
+  --color-slate-500: #9a886e;
 
-  /* درجات النص الرمادي (أغمق عشان الوضوح) */
-  --color-slate-100: #1e293b;
-  --color-slate-200: #1e293b;
-  --color-slate-300: #334155;
-  --color-slate-400: #475569;
-  --color-slate-500: #64748b;
+  /* الأزرق النيلي */
+  --color-cyan-200: #b9e0e5;
+  --color-cyan-300: #65b7c5;
+  --color-cyan-400: #2796a8;
+  --color-cyan-500: #167789;
 
-  /* اللبني (بدل cyan) */
-  --color-cyan-200: #0369a1;
-  --color-cyan-300: #0284c7;
-  --color-cyan-400: #38bdf8;
-  --color-cyan-500: #8ecdf7;
+  /* الذهبي والرملي */
+  --color-indigo-300: #f2d48b;
+  --color-indigo-400: #dcb65e;
+  --color-indigo-500: #c99a38;
+  --color-indigo-600: #a87925;
 
-  /* البمبي (بدل indigo وpurple) */
-  --color-indigo-300: #f472b6;
-  --color-indigo-400: #f472b6;
-  --color-indigo-500: #f9a8d4;
-  --color-indigo-600: #f9a8d4;
-  --color-purple-300: #ec4899;
-  --color-purple-400: #ec4899;
-  --color-purple-500: #fbcfe8;
+  /* ألوان الآثار */
+  --color-purple-300: #d9b58c;
+  --color-purple-400: #bd8952;
+  --color-purple-500: #a66b35;
 
-  /* صح وغلط في الاختبارات */
-  --color-emerald-200: #047857;
-  --color-emerald-300: #059669;
-  --color-rose-200: #be123c;
-  --color-rose-300: #e11d48;
+  /* الصح والغلط */
+  --color-emerald-200: #a7d9a2;
+  --color-emerald-300: #39854b;
+  --color-rose-200: #f3b4a7;
+  --color-rose-300: #d65b4a;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   min-height: 100vh;
-  color: #1e293b;
-  background-color: #ffffff;
+  color: #3e3022;
+  background-color: #eeda8c;
+
   background-image:
-    radial-gradient(60rem 30rem at 10% -10%, rgb(142 205 247 / 0.40), transparent 60%),
-    radial-gradient(50rem 30rem at 95% 5%, rgb(249 168 212 / 0.40), transparent 60%),
-    radial-gradient(50rem 40rem at 50% 110%, rgb(142 205 247 / 0.30), transparent 60%);
+    radial-gradient(
+      60rem 30rem at 10% -10%,
+      rgb(220 182 94 / 0.22),
+      transparent 60%
+    ),
+    radial-gradient(
+      50rem 30rem at 95% 5%,
+      rgb(39 150 168 / 0.16),
+      transparent 60%
+    ),
+    radial-gradient(
+      50rem 40rem at 50% 110%,
+      rgb(189 137 82 / 0.16),
+      transparent 60%
+    );
+
   background-attachment: fixed;
 }
 
-::selection { background: rgb(249 168 212 / 0.45); }
-:focus-visible { outline: 2px solid #38bdf8; outline-offset: 3px; }
+::selection {
+  background: rgba(233, 203, 132, 0.45);
+}
+
+:focus-visible {
+  outline: 2px solid #2796a8;
+  outline-offset: 3px;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }

@@ -28,7 +28,7 @@ export default function Header() {
           <span className={`${grad} flex h-9 w-9 items-center justify-center rounded-lg shadow-lg shadow-cyan-500/30`}>
             <Dna className="h-5 w-5" />
           </span>
-          علومي
+          تاريخي
         </Link>
         <nav className="hidden items-center gap-1 lg:flex">
           {links.map(([h, l]) => (

@@ -17,7 +17,7 @@ export default function Home() {
           <Sparkles className="h-4 w-4" /> أهلًا بالعالِم الصغير
         </span>
         <h1 className="relative mx-auto mt-6 max-w-3xl text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl">
-          اكتشف العلوم <span className={gradText}>من حولك</span>
+          اكتشف التاريخ <span className={gradText}>من حولك</span>
         </h1>
         <p className="relative mx-auto mt-5 max-w-2xl text-lg leading-loose text-slate-300">
           من التربة وتسرب الماء، إلى ذكاء المصريين القدماء، إلى خطوات البحث وأدوات الملاحظة: تعلّم وجرّب واختبر نفسك.

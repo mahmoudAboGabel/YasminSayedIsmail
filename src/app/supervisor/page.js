@@ -4,8 +4,8 @@ import { Glass, PageHero, grad } from "@/components/ui";
 export const metadata = { title: "الإشراف الأكاديمي | معمل العلوم" };
 
 const people = [
-  { Icon: Award, role: "المشرف الأكاديمي", name: "أ.د. سمية رفعت" },
-  { Icon: UserCheck, role: "المعيد", name: "مروة حسن" },
+  { Icon: Award, role: "المشرف الأكاديمي", name: "أ.د. محمد عادل" },
+  { Icon: UserCheck, role: "المعيد", name: "لمياء جلال" },
 ];
 
 export default function Supervisor() {

@@ -12,14 +12,14 @@ export default function Preparer() {
         <div className="relative flex flex-col items-center gap-6 text-center sm:flex-row sm:text-start">
           <div className={`${grad} flex h-28 w-28 shrink-0 items-center justify-center rounded-full text-4xl font-bold text-white shadow-xl shadow-indigo-500/30`}>ي</div>
           <div>
-            <h2 className="text-2xl font-bold text-white">ياسمين سيد اسماعيل</h2>
+            <h2 className="text-2xl font-bold text-white">منة الله محمد صلاح</h2>
             <p className="mt-1 text-cyan-300">مُعِدّة المنصة ومطوّرتها</p>
           </div>
         </div>
         <dl className="relative mt-8 grid gap-4">
           <div className="flex gap-3 rounded-2xl border border-white/10 bg-white/5 p-4">
             <Laptop className="mt-0.5 h-5 w-5 shrink-0 text-cyan-300" />
-            <div><dt className="text-sm text-slate-400">التخصص</dt><dd className="font-medium text-white">أخصائي تكنولوجيا التعليم</dd></div>
+            <div><dt className="text-sm text-slate-400">التخصص</dt><dd className="font-medium text-white">معلم حاسب الي</dd></div>
           </div>
           <div className="flex gap-3 rounded-2xl border border-white/10 bg-white/5 p-4">
             <Building2 className="mt-0.5 h-5 w-5 shrink-0 text-cyan-300" />
